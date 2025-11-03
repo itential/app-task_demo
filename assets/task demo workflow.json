@@ -1,0 +1,176 @@
+{
+  "name": "task demo",
+  "tasks": {
+    "workflow_start": {
+      "name": "workflow_start",
+      "groups": [],
+      "nodeLocation": {
+        "x": 144,
+        "y": -492
+      },
+      "x": 0,
+      "y": 0.5
+    },
+    "workflow_end": {
+      "name": "workflow_end",
+      "groups": [],
+      "nodeLocation": {
+        "x": 144,
+        "y": -180
+      },
+      "x": 1,
+      "y": 0.5
+    },
+    "bb6e": {
+      "name": "testTask",
+      "canvasName": "testTask",
+      "summary": "Test Task for automated task execution.",
+      "description": "Test Task for automated task execution.",
+      "location": "Application",
+      "locationType": null,
+      "app": "TaskDemo",
+      "type": "automatic",
+      "displayName": "TaskDemo",
+      "variables": {
+        "incoming": {
+          "input": "testing input"
+        },
+        "outgoing": {
+          "output": ""
+        }
+      },
+      "actor": "Pronghorn",
+      "groups": [],
+      "nodeLocation": {
+        "x": -168,
+        "y": -348
+      }
+    },
+    "2f1e": {
+      "name": "testViewAngularJS",
+      "canvasName": "testViewAngularJS",
+      "summary": "Test View AngularJS task",
+      "description": "Test View AngularJS task",
+      "location": "Application",
+      "app": "TaskDemo",
+      "displayName": "TaskDemo",
+      "type": "manual",
+      "variables": {
+        "incoming": {
+          "header": "Task Header",
+          "body": "I am a task body using AngularJS.",
+          "btn_success": "Proceed",
+          "btn_failure": ""
+        },
+        "outgoing": {}
+      },
+      "view": "/TaskDemo/task/testViewAngularJS",
+      "groups": [],
+      "nodeLocation": {
+        "x": 144,
+        "y": -348
+      }
+    },
+    "954c": {
+      "name": "testViewReact",
+      "canvasName": "testViewReact",
+      "summary": "Test View React task",
+      "description": "Test View React task",
+      "location": "Application",
+      "app": "TaskDemo",
+      "displayName": "TaskDemo",
+      "type": "manual",
+      "variables": {
+        "incoming": {
+          "header": "Task Header",
+          "body": "I am a task body using React.",
+          "btn_success": "Proceed",
+          "btn_failure": ""
+        },
+        "outgoing": {}
+      },
+      "view": "/TaskDemo/task/testViewReact",
+      "groups": [],
+      "nodeLocation": {
+        "x": 456,
+        "y": -348
+      }
+    }
+  },
+  "transitions": {
+    "workflow_start": {
+      "bb6e": {
+        "state": "success",
+        "type": "standard"
+      },
+      "2f1e": {
+        "state": "success",
+        "type": "standard"
+      },
+      "954c": {
+        "state": "success",
+        "type": "standard"
+      }
+    },
+    "workflow_end": {},
+    "bb6e": {
+      "workflow_end": {
+        "state": "success",
+        "type": "standard"
+      }
+    },
+    "2f1e": {
+      "workflow_end": {
+        "state": "success",
+        "type": "standard"
+      }
+    },
+    "954c": {
+      "workflow_end": {
+        "state": "success",
+        "type": "standard"
+      }
+    }
+  },
+  "inputSchema": {
+    "type": "object",
+    "properties": {}
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{24}$"
+      },
+      "initiator": {
+        "type": "string"
+      }
+    }
+  },
+  "canvasVersion": 3,
+  "type": "automation",
+  "font_size": 12,
+  "errorHandler": null,
+  "preAutomationTime": 0,
+  "sla": 0,
+  "last_updated": "2025-11-03T12:39:55.442Z",
+  "last_updated_by": {
+    "firstname": "admin",
+    "inactive": false,
+    "provenance": "Pronghorn",
+    "username": "admin"
+  },
+  "lastUpdatedVersion": "5.55.5",
+  "created": "2025-11-03T12:37:07.053Z",
+  "created_by": {
+    "firstname": "admin",
+    "inactive": false,
+    "provenance": "Pronghorn",
+    "username": "admin"
+  },
+  "createdVersion": "5.55.5",
+  "tags": [],
+  "groups": [],
+  "migrationVersion": 7
+}

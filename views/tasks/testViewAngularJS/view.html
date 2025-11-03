@@ -1,0 +1,17 @@
+<md-dialog aria-label="task">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>{{header}}</h2>
+      <span flex></span>
+    </div>
+  </md-toolbar>
+  <md-dialog-content>
+    <pre style="margin: 20px 5px 5px 10px;">{{body}}</pre>
+  </md-dialog-content>
+  <div class="md-actions">
+    <span flex></span>
+    <md-button ng-click="cancel()" class="md-primary">Cancel</md-button>
+    <md-button ng-if="btn_failure" ng-click="reject()" class="md-primary">{{btn_failure}}</md-button>
+    <md-button ng-click="accept()" class="md-primary">{{btn_success}}</md-button>
+  </div>
+</md-dialog>

@@ -1,0 +1,77 @@
+{
+  "id": "@custom/app-task_demo",
+  "title": "TaskDemo",
+  "export": "TaskDemo",
+  "type": "Application",
+  "summary": "TaskDemo",
+  "pdb": true,
+  "roles": [
+    "admin"
+  ],
+  "methods": [
+    {
+      "name": "testTask",
+      "summary": "Test Task for automated task execution.",
+      "input": [
+        {
+          "name": "input",
+          "type": "string",
+          "info": "Input for the test task."
+        }
+      ],
+      "output": {
+        "name": "output",
+        "type": "string",
+        "description": "Output test."
+      },
+      "task": true,
+      "route": {
+        "enabled": true,
+        "path": "/testTask/:input",
+        "verb": "POST"
+      },
+      "roles": [
+        "admin"
+      ]
+    }
+ ],
+  "views": [
+    {
+      "type": "task",
+      "title": "Test View AngularJS",
+      "description": "Test View AngularJS task",
+      "path": "/task/testViewAngularJS",
+      "template": "tasks/testViewAngularJS/view.html",
+      "variables": {
+        "incoming": {
+          "header": null,
+          "body": null,
+          "btn_success": null,
+          "btn_failure": null
+        },
+        "outgoing": {}
+      },
+      "roles": ["admin"]
+    },
+    {
+      "type": "task",
+      "title": "Test View React",
+      "description": "Test View React task",
+      "path": "/task/testViewReact",
+      "template": "tasks/dist",
+      "taskVersion": 2,
+      "variables": {
+        "incoming": {
+          "header": null,
+          "body": null,
+          "btn_success": null,
+          "btn_failure": null
+        },
+        "outgoing": {}
+      },
+      "roles": ["admin"]
+    }
+  ],
+  "src": "cog.js",
+  "encrypted": false
+}

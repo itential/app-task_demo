@@ -1,0 +1,30 @@
+{
+  "name": "@custom/app-task_demo",
+  "version": "1.0.0",
+  "main": "cog.js",
+  "author": "Itential",
+  "license": "Apache-2.0",
+  "style": "dist/styles.css",
+  "scripts": {
+    "build:tasks": "cd views/tasks && webpack"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.0",
+    "@babel/preset-env": "^7.22.0",
+    "@babel/preset-react": "^7.22.0",
+    "babel-loader": "^9.1.0",
+    "css-loader": "^6.8.0",
+    "postcss": "^8.4.24",
+    "postcss-loader": "^7.3.0",
+    "postcss-prefix-selector": "^1.16.0",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.0"
+  }
+}
