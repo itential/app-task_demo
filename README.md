@@ -61,6 +61,14 @@ If you encounter webpack build issues:
 - React components should handle null/undefined values for task.variables
 - Use optional chaining and default objects to prevent runtime errors
 - This app is for testing purposes and example sharing only
+- Tested successfully on Itential Platform 2023.2.x and 6.x environments
+
+## Compatibility Testing
+
+This application has been tested with:
+
+- **Itential Platform 2023.2.x**: Both AngularJS and React tasks function correctly
+- **Itential Platform 6.x**: Full compatibility with React tasks; AngularJS tasks are not supported and will need to be rewritten as React tasks.
 
 ## License
 
