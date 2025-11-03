@@ -1,6 +1,3 @@
-const exec = require('child_process').exec;
-const crypto = require('crypto');
-
 class TaskDemo {
   constructor() {
     log.trace("TaskDemo Application loading");
