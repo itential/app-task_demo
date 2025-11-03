@@ -4,7 +4,6 @@
   "main": "cog.js",
   "author": "Itential",
   "license": "Apache-2.0",
-  "style": "dist/styles.css",
   "scripts": {
     "build:tasks": "cd views/tasks && webpack"
   },
